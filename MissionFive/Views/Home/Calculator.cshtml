@@ -1,6 +1,30 @@
 ﻿@{
-    ViewData["Title"] = "Privacy Policy";
+    ViewData["Title"] = "Tutoring Calculator";
 }
-<h1>@ViewData["Title"]</h1>
 
-<p>Use this page to detail your site's privacy policy.</p>
+<h2>Tennis Tutoring Cost Calculator</h2>
+
+<!-- Hours input -->
+<label for="hours">Hours needed:</label>
+<input id="hours" type="number" min="1" />
+
+<br /><br />
+
+<!-- Rate (fixed, non-editable) -->
+<label for="rate">Rate per hour ($):</label>
+<input id="rate" value="30" disabled />
+
+<br /><br />
+
+<!-- Calculate button -->
+<button id="calcBtn">Calculate Total</button>
+
+<br /><br />
+
+<!-- Output -->
+<label for="total">Total cost:</label>
+<input id="total" disabled />
+
+@section Scripts {
+    <script src="~/js/calculator.js"></script>
+}
